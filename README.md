@@ -5,6 +5,7 @@ spring security demo
 1.
 @Entity
 public class SysUser implements UserDetails
+
 2.
 @Entity
 public class CustomUserService implements UserDetailsService
