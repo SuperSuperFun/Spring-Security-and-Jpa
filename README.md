@@ -15,21 +15,21 @@ UserDetails / UserDetailsService均为spring security提供的接口
 
 ###3.
 @Configuration
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter
-自定义一个安全配置类并继承WebSecurityConfigurerAdapter，这里进行各种安全规则配置
-     * 更多的权限控制方式：
-     * access(String) String EL表达式结果为true时可访问
-     * anonymous() 匿名可访问
-     * denyAll() 用户不可访问
-     * fullyAuthenticated() 用户完全认证可访问（非remember me下自动登录）
-     * hasAnyAuthority(String) 参数中任意权限的用户可访问
-     * hasAnyRole(String) 参数中任意角色的用户可访问
-     * hasAuthority(String) 某一权限的用户可访问
-     * hasRole(String) 某一角色的用户可访问
-     * permitAll() 所有用户可访问
-     * rememberMe() 允许通过remember me登录的用户访问
-     * authenticated() 用户登录后可访问
-     * hasIpAddress(String) 用户来自参数中的ip可访问
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter<br>
+自定义一个安全配置类并继承WebSecurityConfigurerAdapter，这里进行各种安全规则配置<br>
+     * 更多的权限控制方式：<br>
+     * access(String) String EL表达式结果为true时可访问<br>
+     * anonymous() 匿名可访问<br>
+     * denyAll() 用户不可访问<br>
+     * fullyAuthenticated() 用户完全认证可访问（非remember me下自动登录）<br>
+     * hasAnyAuthority(String) 参数中任意权限的用户可访问<br>
+     * hasAnyRole(String) 参数中任意角色的用户可访问<br>
+     * hasAuthority(String) 某一权限的用户可访问<br>
+     * hasRole(String) 某一角色的用户可访问<br>
+     * permitAll() 所有用户可访问<br>
+     * rememberMe() 允许通过remember me登录的用户访问<br>
+     * authenticated() 用户登录后可访问<br>
+     * hasIpAddress(String) 用户来自参数中的ip可访问<br>
      
 ###4.
 SysUser里面有一个属性 
