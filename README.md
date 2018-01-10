@@ -32,9 +32,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter<br>
      * hasIpAddress(String) 用户来自参数中的ip可访问<br>
      
 ###4.
-SysUser里面有一个属性 
-@ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
-private List<SysRole> roles;
-SysUser和SysRole多对多，则需要一个中间表，此属性便是一个中间表的对象（初次接触，个人理解）
-项目使用mysql，启动项目后会自动生成三张表，sys_user, sys_role, sys_user_roles
+SysUser里面有一个属性<br>
+@ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)<br>
+private List<SysRole> roles;<br>
+SysUser和SysRole多对多，则需要一个中间表，此属性便是一个中间表的对象（初次接触，个人理解）<br>
+项目使用mysql，启动项目后会自动生成三张表，sys_user, sys_role, sys_user_roles<br>
 
