@@ -1,19 +1,19 @@
 # Spring-Security-and-Jpa
 spring security demo
 
-注意事项：
+##注意事项：
 
-1.
+###1.
 @Entity
 public class SysUser implements UserDetails
 
-2.
+###2.
 @Entity
 public class CustomUserService implements UserDetailsService
 
 UserDetails / UserDetailsService均为spring security提供的接口
 
-3.
+###3.
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 自定义一个安全配置类并继承WebSecurityConfigurerAdapter，这里进行各种安全规则配置
@@ -31,7 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
      * authenticated() 用户登录后可访问
      * hasIpAddress(String) 用户来自参数中的ip可访问
      
-4.
+###4.
 SysUser里面有一个属性 
 @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
 private List<SysRole> roles;
