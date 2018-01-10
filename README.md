@@ -2,6 +2,7 @@
 spring security demo
 
 注意事项：
+
 1.
 @Entity
 public class SysUser implements UserDetails
