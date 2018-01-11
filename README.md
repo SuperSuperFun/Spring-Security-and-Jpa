@@ -38,3 +38,5 @@ private List<SysRole> roles;<br>
 SysUser和SysRole多对多，则需要一个中间表，此属性便是一个中间表的对象（初次接触，个人理解）<br>
 项目使用mysql，启动项目后会自动生成三张表，sys_user, sys_role, sys_user_roles<br>
 
+###5.
+http://www.spring4all.com/article/428
