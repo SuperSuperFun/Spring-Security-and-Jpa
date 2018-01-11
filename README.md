@@ -1,19 +1,19 @@
 # Spring-Security-and-Jpa
 spring security demo
 
-##注意事项：
+## 注意事项：
 
-###1.
+### 1.
 @Entity
 public class SysUser implements UserDetails
 
-###2.
+### 2.
 @Entity
 public class CustomUserService implements UserDetailsService
 
 UserDetails / UserDetailsService均为spring security提供的接口
 
-###3.
+### 3.
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter<br>
 自定义一个安全配置类并继承WebSecurityConfigurerAdapter，这里进行各种安全规则配置<br>
@@ -31,12 +31,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter<br>
      * authenticated() 用户登录后可访问<br>
      * hasIpAddress(String) 用户来自参数中的ip可访问<br>
      
-###4.
+### 4.
 SysUser里面有一个属性<br>
 @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)<br>
 private List<SysRole> roles;<br>
 SysUser和SysRole多对多，则需要一个中间表，此属性便是一个中间表的对象（初次接触，个人理解）<br>
 项目使用mysql，启动项目后会自动生成三张表，sys_user, sys_role, sys_user_roles<br>
 
-###5.
-http://www.spring4all.com/article/428
+### 5.
+*http://www.spring4all.com/article/428*
